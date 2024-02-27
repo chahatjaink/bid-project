@@ -7,6 +7,7 @@ const BidController = {
     try {
       const { projectId, amount } = req.body;
       const userId = req.user.id;
+			console.log("TCL: userId", userId)
 
       const project = await Project.findByPk(projectId);
       if (!project) {
@@ -15,10 +16,9 @@ const BidController = {
 
       const newBid = await Bid.create({
         amount,
-        ProjectId: projectId,
-        UserId: userId,
+        projectId: projectId,
+        userId: userId,
       });
-
       res.status(201).json(newBid);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -35,8 +35,8 @@ const BidController = {
       }
 
       const bids = await Bid.findAll({
-        where: { ProjectId: projectId },
-        include: [{ model: User, attributes: ["id", "name"] }],
+        where: { projectId: projectId },
+        include: [{ model: User, attributes: ["id", "firstName", "lastName"] }],
       });
 
       res.status(200).json(bids);
@@ -60,16 +60,16 @@ const BidController = {
       }
 
       const smallestBid = await Bid.findOne({
-        where: { ProjectId: projectId },
+        where: { projectId: projectId },
         order: [["amount", "ASC"]],
-        attributes: ["id", "amount", "UserId"],
+        attributes: ["id", "amount", "userId"],
       });
 
       if (!smallestBid) {
         return res.status(404).json({ error: "No bids found for the project" });
       }
 
-      const assignedUser = await User.findByPk(smallestBid.UserId);
+      const assignedUser = await User.findByPk(smallestBid.userId);
 
       await project.update({
         assignedUserId: assignedUser.id,
