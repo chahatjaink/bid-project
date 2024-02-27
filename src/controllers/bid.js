@@ -7,7 +7,6 @@ const BidController = {
     try {
       const { projectId, amount } = req.body;
       const userId = req.user.id;
-			console.log("TCL: userId", userId)
 
       const project = await Project.findByPk(projectId);
       if (!project) {

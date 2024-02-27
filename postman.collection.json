@@ -1,0 +1,191 @@
+{
+    "collection": {
+      "info": {
+        "_postman_id": "ac4d4f4c-0041-4d4e-b0bc-ab8073b4c859",
+        "name": "Project-Bid",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "updatedAt": "2024-02-27T13:51:21.000Z",
+        "uid": "26263212-ac4d4f4c-0041-4d4e-b0bc-ab8073b4c859",
+        "createdAt": null,
+        "lastUpdatedBy": null
+      },
+      "item": [
+        {
+          "name": "Create User",
+          "id": "d8c5e392-ca06-40fc-b752-b2c74c99f637",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\":\"Chahat\",\n    \"lastName\":\"Jain\",\n    \"email\":\"chahatjaink@gmail.com\",\n    \"password\":\"password\",\n    \"role\":\"Admin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-d8c5e392-ca06-40fc-b752-b2c74c99f637"
+        },
+        {
+          "name": "Login",
+          "id": "99288ee5-35e6-465d-8217-71527c4367a9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"chahatjaink@gmail.com\",\n    \"password\":\"password\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-99288ee5-35e6-465d-8217-71527c4367a9"
+        },
+        {
+          "name": "User By Id",
+          "id": "b72abb60-fda7-4e36-a36b-315bfc5b1594",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              
+            ]
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-b72abb60-fda7-4e36-a36b-315bfc5b1594"
+        },
+        {
+          "name": "All Projects",
+          "id": "e30176a8-2d4a-4751-8d03-d71c13987d1a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              
+            ]
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-e30176a8-2d4a-4751-8d03-d71c13987d1a"
+        },
+        {
+          "name": "Create Project",
+          "id": "07f5c395-3126-4752-a7bd-62f9b5b96d88",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              
+            ]
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-07f5c395-3126-4752-a7bd-62f9b5b96d88"
+        },
+        {
+          "name": "Bid",
+          "id": "54e19dc5-bf2f-4227-b194-3735be11000b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              
+            ]
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-54e19dc5-bf2f-4227-b194-3735be11000b"
+        },
+        {
+          "name": "Assign Bid",
+          "id": "3c1a9147-eab1-4741-a29d-0c296a51b409",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              
+            ]
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-3c1a9147-eab1-4741-a29d-0c296a51b409"
+        },
+        {
+          "name": "Place Bid",
+          "id": "2cc3ca42-643b-453e-911d-9395f3827769",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              
+            ]
+          },
+          "response": [
+            
+          ],
+          "uid": "26263212-2cc3ca42-643b-453e-911d-9395f3827769"
+        }
+      ]
+    }
+  }
